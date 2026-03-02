@@ -199,8 +199,8 @@ export function loadMenu() {
         orderBtn.textContent = `Launch ${beer.name}`;
 
         orderBtn.addEventListener('click', () => {
-            console.log(`🚀 Dispatching a cold ${beer.name} to Sector 7G...`);
-            alert(`${beer.name} is on its way at light speed!`);
+            console.log(`Dispatching a cold ${beer.name}`);
+            alert(`${beer.name} is on its way!`);
         });
 
         beerCard.appendChild(orderBtn);
