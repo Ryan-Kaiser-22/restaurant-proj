@@ -7,18 +7,32 @@ export function loadHome() {
     const title = document.createElement('h1');
     title.textContent = "Big Bang Brewery";
 
-    // Create the image INSIDE the function
     const myImage = new Image();
     myImage.src = RestaurantImg;
-    myImage.style.maxWidth = "100%"; // Keep it inside the dark box!
-    myImage.style.borderRadius = "10px";
+    myImage.classList.add('hero-image');
+    const infoGrid = document.createElement('div');
+    infoGrid.classList.add('menu-grid', 'home-grid'); 
 
-    const description = document.createElement('p');
-    description.textContent = "Taplist updated daily!";
+    const infoCards = [
+        { title: "The Menu", body: "Taplist updated daily! (Mostly by accident)." },
+        { title: "Opening Times", body: "Mon–Fri: 42:00 to Sunset | Sat–Sun: Until the heat death of the universe."},
+        { title: "Location", body: "Unit 42, Sector 7G, The Western Spiral Arm (Right past the bypass)." },
+        { title: "Pick up", body: "4 packs available for everything we brew!"}
+    ];
 
-    content.appendChild(title);
-    content.appendChild(myImage); // Append the image here
-    content.appendChild(description);
+    infoCards.forEach(item => {
+        const card = document.createElement('div');
+        card.classList.add('beer-card');
+        card.innerHTML = `
+            <div class="beer-header">
+                <h3>${item.title}</h3>
+            </div>
+            <p class="description"><em>${item.body}</em></p>
+        `;
 
+        infoGrid.appendChild(card);
+    });
+
+    content.append(title, myImage, infoGrid);
     return content;
 }
