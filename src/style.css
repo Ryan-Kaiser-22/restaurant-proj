@@ -204,6 +204,32 @@ h1 {
     }
 }
 
+@media (max-width: 480px) {
+    nav {
+            flex-wrap: wrap; /* Allows buttons to move to a second line if needed */
+            justify-content: center;
+            gap: 10px;
+        }
+
+        nav button {
+            padding: 10px 15px; /* Shorter left/right padding, slightly taller for "tappability" */
+            font-size: 0.9rem;   /* Slightly smaller text */
+            flex: 1 1 auto;      /* Allows buttons to grow to fill space */
+            min-width: 100px;    /* Prevents them from getting too skinny */
+        }nav {
+            flex-wrap: wrap; /* Allows buttons to move to a second line if needed */
+            justify-content: center;
+            gap: 10px;
+        }
+
+        nav button {
+            padding: 10px 15px; /* Shorter left/right padding, slightly taller for "tappability" */
+            font-size: 0.9rem;   /* Slightly smaller text */
+            flex: 1 1 auto;      /* Allows buttons to grow to fill space */
+            min-width: 100px;    /* Prevents them from getting too skinny */
+        }
+    }
+    
 .sekuya-regular {
   font-family: "Sekuya", system-ui;
   font-weight: 400;
