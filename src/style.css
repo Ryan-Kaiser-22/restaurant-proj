@@ -71,7 +71,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
-    width: 800%;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -195,9 +195,12 @@ h1 {
     transform: scale(0.98);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .menu-grid {
         grid-template-columns: 1fr;
+    }
+    h1 {
+        font-size: 1.5rem;
     }
 }
 
