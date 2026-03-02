@@ -8,7 +8,7 @@ export function loadAbout() {
     title.textContent = "About the Big Bang Brewery";
 
     const aboutCard = document.createElement('div');
-    aboutCard.classList.add('beer-card', 'about-card'); // Reusing your beer-card styles
+    aboutCard.classList.add('beer-card', 'about-card'); 
 
     aboutCard.innerHTML = `
         <div class="beer-header">

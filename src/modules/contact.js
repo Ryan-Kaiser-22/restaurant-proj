@@ -1,4 +1,4 @@
-import { loadHome } from './homepage.js'; // Import Home so the button can link back
+import { loadHome } from './homepage.js'; 
 
 export function loadContact() {
     const content = document.createElement('div');
@@ -32,11 +32,9 @@ export function loadContact() {
         const tabBody = document.getElementById('tab-body');
         const homeBtn = document.getElementById('home-btn');
 
-        // Clear and reload Home without refreshing the whole browser
         tabBody.innerHTML = '';
         tabBody.appendChild(loadHome());
 
-        // Reset the Nav styling so "Home" is highlighted again
         const buttons = document.querySelectorAll('nav button');
         buttons.forEach(btn => btn.classList.remove('active-tab'));
         if (homeBtn) homeBtn.classList.add('active-tab');

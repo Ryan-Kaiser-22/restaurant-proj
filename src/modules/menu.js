@@ -1,4 +1,3 @@
-// modules/menu.js
 const tapList = [
     {
         name: "Event Horizon",
@@ -195,12 +194,10 @@ export function loadMenu() {
             <p class="description"><em>${beer.notes}</em></p>
         `;
 
-        // Create button
         const orderBtn = document.createElement('button');
         orderBtn.classList.add('order-btn');
         orderBtn.textContent = `Launch ${beer.name}`;
 
-        // click event
         orderBtn.addEventListener('click', () => {
             console.log(`🚀 Dispatching a cold ${beer.name} to Sector 7G...`);
             alert(`${beer.name} is on its way at light speed!`);

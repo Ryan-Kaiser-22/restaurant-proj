@@ -7,6 +7,8 @@ body {
     background-repeat: repeat;
     background-size: 180px 180px;
     background-blend-mode: multiply; 
+    background-attachment: fixed;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,13 +46,12 @@ nav button {
     border: 2px solid #555;
     color: #ffc505;
     padding: 8px 25px;
-    border-radius: 50px; /* Pill shape */
+    border-radius: 50px; 
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
 }
 
-/* The "Glow" effect from your image */
 nav button.active-tab {
     border-color: #fbff00;
     color: #fbff00;
@@ -58,30 +59,44 @@ nav button.active-tab {
 }
 
 h1 {
-    color: #fbff00;
-    font-size: 3rem;
+    color: #ffc505;
+    font-size: 5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 40px;
-    font-family: 'Impact', sans-serif; /* Bold, condensed look */
+    font-family: "Rubik Microbe", system-ui;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    width: 800%;
+    box-sizing: border-box;
+}
+
+.hero-image {
+    width: 100%;       
+    display: block;    
+    height: auto;      
+    margin-bottom: 20px; 
 }
 
 .menu-grid {
     display: grid;
-    /* This creates exactly 2 columns on larger screens */
     grid-template-columns: 1fr 1fr; 
     gap: 25px;
     padding: 0 40px;
     width: 100%;
-    box-sizing: border-box; /* Ensures padding doesn't push width over 100% */
+    box-sizing: border-box; 
 }
 
 .beer-card {
-    background-color: rgba(30, 30, 30, 0.6); /* Semi-transparent dark gray */
+    background-color: rgba(30, 30, 30, 0.6); 
     border: 1px solid #444;
     border-radius: 15px;
     padding: 25px;
-    backdrop-filter: blur(5px); /* Optional: makes cards look like frosted glass */
+    backdrop-filter: blur(5px); 
     transition: transform 0.3s ease, border-color 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -89,7 +104,7 @@ h1 {
 }
 
 .abv {
-    color: #ffc505; /* Neon yellow to match your glow theme */
+    color: #ffc505;
     font-weight: 900;
     font-size: 1.1rem;
     letter-spacing: 1px;
@@ -99,15 +114,14 @@ h1 {
 .description {
     margin-top: 15px;
     line-height: 1.5;
-    color: #d1d1d1; /* Light gray for better readability on dark background */
+    color: #ffc505; 
 }
 
-/* Specific styling for the italicized notes inside the description */
 .description em {
-    font-family: 'Georgia', serif; /* A slight font change makes notes feel more "editorial" */
+    font-family: 'Georgia', serif; 
     font-style: italic;
     color: #ffc505; 
-    display: block; /* Moves notes to their own line if they aren't already */
+    display: block; 
     margin-top: 10px;
     padding-left: 10px;
 }
@@ -116,7 +130,6 @@ h1 {
     width: 100%;
     min-height: 80vh;
     padding: 20px 0;
-    /* Starfield Effect */
     background-color: #0c0c0c;
     background-image: 
         radial-gradient(#ffc505, rgba(255, 255, 255, 0.2) 2px, transparent 2px),
@@ -182,9 +195,38 @@ h1 {
     transform: scale(0.98);
 }
 
-/* Responsive adjustment: 1 column on mobile devices */
 @media (max-width: 768px) {
     .menu-grid {
         grid-template-columns: 1fr;
     }
 }
+
+.sekuya-regular {
+  font-family: "Sekuya", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.roboto-headline {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.monofett-regular {
+  font-family: "Monofett", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rubik-microbe-regular {
+  font-family: "Rubik Microbe", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
